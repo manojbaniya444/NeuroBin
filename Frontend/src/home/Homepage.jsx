@@ -1,12 +1,14 @@
-import React from "react";
+import { useState } from "react";
+import Navbar from "./Navbar";
+import BodyComp from "./Body";
 
-const Homepage = () => {
+function App() {
   return (
-    <div>
-      This is Home page or landing page where we will redirect user to other
-      pagesd
+    <div className="w-[100%] h-screen text-lg flex flex-col">
+      <Navbar />
+      <BodyComp />
     </div>
   );
-};
+}
 
-export default Homepage;
+export default App;
