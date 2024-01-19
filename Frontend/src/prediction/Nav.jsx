@@ -8,7 +8,7 @@ const Nav = () => {
   const { setOpenBin } = useGlobalContext();
 
   return (
-    <div className="flex justify-between py-[20px] px-[5%] bg-zinc-50">
+    <div className="flex justify-between py-[20px] px-[5%]  bg-transparent backdrop-blur-md">
       <Link to="/">
         <img src={logo} alt="logo image" className="h-[30px] cursor-pointer" />
       </Link>

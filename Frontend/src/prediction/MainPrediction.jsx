@@ -21,6 +21,11 @@ const MainPrediction = () => {
       <div className="self-center bg-zinc-100">
         <input
           type="file"
+          className="w-full text-sm text-slate-500
+            file:mr-4 file:py-2 file:px-4 file:rounded-md
+            file:border-0 file:text-sm file:font-semibold
+            file:bg-green-500 file:text-white
+            hover:file:bg-green-700 file:cursor-pointer"
           onChange={(e) => {
             setBase64(null);
             setForm(e.target.files[0]);

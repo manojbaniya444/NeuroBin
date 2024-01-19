@@ -3,7 +3,7 @@ import LandingImage from "../assets/landing_image.png";
 
 const BodyComp = () => {
   return (
-    <div className=" px-[2%] flex flex-row w-full justify-between items-center bg-zinc-100 flex-1">
+    <div className=" px-[2%] flex flex-row w-full justify-between items-center bg-transparent flex-1">
       <div className="w-2/3 flex flex-col gap-4">
         <h1 className="font-bold text-4xl">
           Welcome to <span className="text-primary">NeuroBin</span>
