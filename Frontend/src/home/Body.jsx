@@ -3,20 +3,22 @@ import LandingImage from "../assets/landing_image.png";
 
 const BodyComp = () => {
   return (
-    <div className="pt-8 px-[5%] flex flex-row w-full justify-between items-center py-12 bg-zinc-100 flex-1">
-      <div className="w-2/3 flex justify-center flex-col gap-4">
+    <div className=" px-[2%] flex flex-row w-full justify-between items-center bg-zinc-100 flex-1">
+      <div className="w-2/3 flex flex-col gap-4">
         <h1 className="font-bold text-4xl">
           Welcome to <span className="text-primary">NeuroBin</span>
         </h1>
-        <p className="text-justify text-lg ">
-          Transforming Waste into a Greener Tomorrow. Our intelligent waste
-          management app empowers you to identify, categorize, and dispose of
-          waste responsibly. Effortlessly contribute to a cleaner environment
-          with waste detection and find the nearest disposal bins. Join us in
-          making a positive impact.
+        <p className="text-justify text-lg font-semibold ">
+          Transforming Waste into a Greener Tomorrow.
         </p>
-        <button className="text-xl font-semibold bg-primary w-fit px-2 py-1 rounded-md text-blue-400 flex items-center gap-2 justify-center">
-          <span className="text-white">Predict</span>{" "}
+        <p className="pt-3 text-base font-light">
+          Our intelligent waste management app empowers you to identify,
+          categorize, and dispose of waste responsibly. Effortlessly contribute
+          to a cleaner environment with waste detection and find the nearest
+          disposal bins. Join us in making a positive impact.
+        </p>
+        <button className="px-4 py-2 rounded-md bg-green-900 text-white self-start">
+          Predict
         </button>
       </div>
       <div className="w-1/3 items-end">
@@ -27,3 +29,9 @@ const BodyComp = () => {
 };
 
 export default BodyComp;
+
+// Our intelligent waste
+// management app empowers you to identify, categorize, and dispose of
+// waste responsibly. Effortlessly contribute to a cleaner environment
+// with waste detection and find the nearest disposal bins. Join us in
+// making a positive impact.
