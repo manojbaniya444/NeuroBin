@@ -6,7 +6,7 @@ import Gradient from "../assets/gradient.jpeg";
 function App() {
   return (
     <div
-      className="w-[100%] h-screen text-lg flex flex-col "
+      className="w-[100%] h-screen text-lg flex flex-col text-zinc-900"
       style={{ backgroundImage: `url(${Gradient})` }}
     >
       <Navbar />

@@ -25,11 +25,12 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <div onClick={() => setOpenBin(true)}>
+      <div onClick={() => setOpenBin(true)} className="relative">
         <img
           src={Bin}
-          className="h-[30px] border-[2px] border-secondary p-0.5 rounded-md hover:bg-secondary/25 cursor-pointer"
+          className="h-[30px] border-[2px] border-black/60 p-0.5 rounded-md hover:bg-black/25 cursor-pointer"
         />
+      <div>Open My Bin</div>
       </div>
     </div>
   );

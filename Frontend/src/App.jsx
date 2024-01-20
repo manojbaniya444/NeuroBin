@@ -11,7 +11,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {openBin && <MyBin />}
+      {/* {openBin && <MyBin />} */}
+      <div className={`fixed ${openBin ? "right-0" : "-right-96"} top-0 z-10 w-96 px-2 py-4 bg-slate-600 h-screen text-white ease-in-out delay-75 duration-300`}><MyBin /></div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/predict" element={<PredictPage />} />

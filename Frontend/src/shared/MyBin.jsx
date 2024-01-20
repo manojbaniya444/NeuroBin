@@ -1,20 +1,24 @@
 import React from "react";
 import { useGlobalContext } from "../Context";
 import { IoIosClose } from "react-icons/io";
+import List from "./bincomps/list";
 
 const MyBin = () => {
   const { openBin, setOpenBin } = useGlobalContext();
 
-  return (
-    <div className="bg-orange-500 w-[300px] h-[100vh] absolute right-0 z-30">
-      <div
-        className=" absolute right-5 top-5 cursor-pointer"
-        onClick={() => setOpenBin(false)}
-      >
-        <IoIosClose className="text-4xl" />
-      </div>
-      MyBin
+  return (    
+    <div className="">
+    <div className="flex flex-row justify-between items-center">
+      <h1 className="font-bold text-3xl">My Bin</h1>
+      <span className="font-mono text-lg border-2 rounded-full w-8 h-8 items-center justify-center flex p-2 hover:bg-white hover:text-black cursor-pointer border-white my-4" onClick={() => setOpenBin(false)}>
+        x
+      </span>
     </div>
+    <div className="my-4">
+      <List />
+    </div>
+    <button className="w-full bg-white text-black p-2 rounded-md active:ring-2 active:ring-black">Click Me</button>
+  </div>
   );
 };
 

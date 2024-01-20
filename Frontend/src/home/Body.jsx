@@ -1,5 +1,6 @@
 import React from "react";
 import LandingImage from "../assets/landing_image.png";
+import { Link } from "react-router-dom";
 
 const BodyComp = () => {
   return (
@@ -11,14 +12,14 @@ const BodyComp = () => {
         <p className="text-justify text-lg font-semibold ">
           Transforming Waste into a Greener Tomorrow.
         </p>
-        <p className="pt-3 text-base font-light">
+        <p className="pt-3 text-base font-light text-zinc-900">
           Our intelligent waste management app empowers you to identify,
           categorize, and dispose of waste responsibly. Effortlessly contribute
           to a cleaner environment with waste detection and find the nearest
           disposal bins. Join us in making a positive impact.
         </p>
         <button className="px-4 py-2 rounded-md bg-green-900 text-white self-start">
-          Predict
+          <Link to="/predict">Predict</Link>
         </button>
       </div>
       <div className="w-1/3 items-end">
