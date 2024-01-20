@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import MapLogo from "../assets/map.jpeg";
 import { useGlobalContext } from "../Context";
+import { Link } from "react-router-dom";
+
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const MainPrediction = () => {
   const {
@@ -80,27 +84,35 @@ const MainPrediction = () => {
         </button>
       </div>
       {base64 && (
-        <div className="flex items-center justify-center flex-col">
-          <div>
-            Your waste is non-biodegradable. Put it in your nearby NeuroBin for
-            recycling.{" "}
-            <a href="/map" className="text-green-500">
-              View Map
-            </a>
+        <div className="flex items-center justify-center flex-col mt-7">
+          <p className="text-center font-sm">Dispose it in</p>
+          <div className="flex gap-2 items-center justify-center">
+            <h1 className="font-3xl font-extrabold text-center">
+              Non-Biodegradable Bin!!
+            </h1>
+            <p
+              className={`bg-zinc-900 px-4 py-2 mt-4 rounded-md w-fit text-white text-base ${
+                visible ? "block" : "hidden"
+              }`}
+              onClick={() => {
+                setVisible(false);
+                setStreak((prev) => prev + 1);
+              }}
+            >
+              <RiDeleteBin5Line />
+            </p>
           </div>
-          <button
-            className={`bg-green-500 px-4 py-2 rounded-md w-fit text-white text-base ${
-              visible ? "block" : "hidden"
-            }`}
-            onClick={() => {
-              setVisible(false);
-              setStreak((prev) => prev + 1);
-            }}
-          >
-            Put in bin
-          </button>
         </div>
       )}
+      <Link to="/map">
+        <div className="absolute bottom-[10%] right-[5%] flex flex-col items-center gap-2">
+          <img
+            src={MapLogo}
+            className={`w-[100px] h-[100px] border-2 border-black rounded-md cursor-pointer`}
+          />
+          <p className="text-center text-xs">Locate bins near you</p>
+        </div>
+      </Link>
     </div>
   );
 };
