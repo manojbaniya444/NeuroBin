@@ -1,51 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ListItem from "./navItem";
+import { useGlobalContext } from "../../Context";
 
-const List = () => {
+const List = ({ items }) => {
+  const [itemsInBin, setItemsInBin] = useState([]);
+  const { streak } = useGlobalContext();
+
   const trash = [
     {
       id: 1,
       name: "A trash",
-      description: "This is a trash",
-      image: "/images/recycle_bin.png",
     },
     {
       id: 2,
       name: "A trash",
-      description: "This is a trash",
-      image: "/images/recycle_bin.png",
     },
     {
       id: 3,
       name: "A trash",
-      description: "This is a trash",
-      image: "/images/recycle_bin.png",
     },
     {
       id: 4,
       name: "A trash",
-      description: "This is a trash",
-      image: "/images/recycle_bin.png",
     },
     {
       id: 5,
       name: "A trash",
-      description: "This is a trash",
-      image: "/images/recycle_bin.png",
     },
   ];
+
+  useEffect(() => {
+    let items = trash.slice(0, streak);
+    setItemsInBin(items);
+  }, [streak]);
+
   return (
     <ul className="divide-y divide-slate-100">
-      {trash.map((trash) => {
-        return (
-          <ListItem
-            key={trash.id}
-            image={trash.image}
-            title={trash.name}
-            rating={trash.description}
-          />
-        );
-      })}
+      {itemsInBin.length > 0 &&
+        itemsInBin.map((trash) => {
+          return <ListItem title={trash.name} key={trash.id}/>;
+        })}
     </ul>
   );
 };

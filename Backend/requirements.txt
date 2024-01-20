@@ -1,0 +1,8 @@
+pandas
+numpy
+flask
+werkzeug
+flask_cors
+shutil
+ultralytics
+opencv-python
