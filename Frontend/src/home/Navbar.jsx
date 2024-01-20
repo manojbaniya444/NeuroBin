@@ -8,7 +8,7 @@ const Navbar = () => {
   const { setOpenBin } = useGlobalContext();
 
   return (
-    <div className="w-full flex flex-row justify-between p-8 m-0 items-center backdrop-blur-md  shadow-sm">
+    <div className="w-full flex flex-row justify-between p-6 m-0 items-center backdrop-blur-md  shadow-sm">
       <img src={logo} className="h-[30px]" />
       <ul className="flex gap-8 items-center h-auto">
         <li className="cursor-pointer px-2 py-1 rounded-md text-white bg-green-500">

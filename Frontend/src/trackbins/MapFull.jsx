@@ -21,21 +21,20 @@ const MapFull = () => {
     { id: 5, name: "NeuroBin 5", lat: 26.7989239, lng: 87.29554 },
     { id: 6, name: "NeuroBin 6", lat: 26.789972, lng: 87.290778 },
     { id: 7, name: "NeuroBin 7", lat: 26.801238, lng: 87.289376 },
-    // Add more bins as needed
   ];
 
   const customMarkerIcon = new L.Icon({
     iconUrl: LocationIcon,
-    iconSize: [32, 32], // Size of the icon
-    iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
-    popupAnchor: [0, -32], // Point from which the popup should open relative to the iconAnchor
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
   });
 
   return (
     <div id="map" className="rounded-md">
       <MapContainer
         center={currentLocation}
-        zoom={15}
+        zoom={16}
         style={{ height: "500px", width: "100%", borderRadius: "6px" }}
       >
         <TileLayer

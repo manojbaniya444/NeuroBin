@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import { RiDeleteBin5Line } from "react-icons/ri";
 
+import Gradient from "../assets/gradient5.jpeg";
+
 const MainPrediction = () => {
   const {
     predictImage,
@@ -27,7 +29,10 @@ const MainPrediction = () => {
 
   return (
     // Main Prediction Section
-    <div className="flex flex-col gap-2 items-center py-4 px-[5%] bg-zinc-100 flex-1">
+    <div
+      className="flex flex-col gap-2 items-center py-4 px-[5%] bg-zinc-100 flex-1"
+      style={{ backgroundImage: `url(${Gradient})` }}
+    >
       {/* input */}
       <div className="self-center bg-zinc-100">
         <input

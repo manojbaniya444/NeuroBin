@@ -20,9 +20,6 @@ const MyBin = () => {
       <div className="my-4">
         <List />
       </div>
-      <button className="w-full bg-white text-black p-2 rounded-md active:ring-2 active:ring-black">
-        Click Me
-      </button>
     </div>
   );
 };
