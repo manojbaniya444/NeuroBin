@@ -34,9 +34,11 @@ const MainPrediction = () => {
       </div>
 
       {/* result */}
-      <div className="flex justify-center flex-col gap-2">
+      <div className="flex justify-center flex-col gap-2 relative">
         {/* scanning animation */}
-        {isDetecting && <div className="">Loading</div>}
+        {isDetecting && (
+          <div className="w-full h-[5px] bg-green-500 animate-scanning absolute top-0"></div>
+        )}
 
         {base64 ? (
           <img
@@ -54,8 +56,9 @@ const MainPrediction = () => {
         <button
           onClick={() => predictImage(form)}
           className="bg-green-900 px-4 py-2 text-white rounded-md cursor-pointer self-center"
+          disabled={!form}
         >
-          Upload
+          Classify waste
         </button>
       </div>
     </div>

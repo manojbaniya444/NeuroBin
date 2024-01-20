@@ -19,7 +19,7 @@ const BodyComp = () => {
           disposal bins. Join us in making a positive impact.
         </p>
         <button className="px-4 py-2 rounded-md bg-green-900 text-white self-start">
-          <Link to="/predict">Predict</Link>
+          <Link to="/predict">Classify now</Link>
         </button>
       </div>
       <div className="w-1/3 items-end">

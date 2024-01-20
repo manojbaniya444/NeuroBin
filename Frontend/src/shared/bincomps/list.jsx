@@ -10,25 +10,25 @@ const List = () => {
       image: "/images/recycle_bin.png",
     },
     {
-      id: 1,
+      id: 2,
       name: "A trash",
       description: "This is a trash",
       image: "/images/recycle_bin.png",
     },
     {
-      id: 1,
+      id: 3,
       name: "A trash",
       description: "This is a trash",
       image: "/images/recycle_bin.png",
     },
     {
-      id: 1,
+      id: 4,
       name: "A trash",
       description: "This is a trash",
       image: "/images/recycle_bin.png",
     },
     {
-      id: 1,
+      id: 5,
       name: "A trash",
       description: "This is a trash",
       image: "/images/recycle_bin.png",
@@ -39,6 +39,7 @@ const List = () => {
       {trash.map((trash) => {
         return (
           <ListItem
+            key={trash.id}
             image={trash.image}
             title={trash.name}
             rating={trash.description}

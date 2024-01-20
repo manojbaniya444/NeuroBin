@@ -16,7 +16,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/predict" className="cursor-pointer">
-            Predict
+            Classify waste
           </Link>
         </li>
         <li>
@@ -30,7 +30,6 @@ const Navbar = () => {
           src={Bin}
           className="h-[30px] border-[2px] border-black/60 p-0.5 rounded-md hover:bg-black/25 cursor-pointer"
         />
-      <div>Open My Bin</div>
       </div>
     </div>
   );
